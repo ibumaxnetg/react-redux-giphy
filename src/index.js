@@ -11,8 +11,6 @@ import rootReducer from "./reducers/";
 const middlewares = [thunk];
 const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
-// console.log("state: ", store.getState());
-
 const rootElement = document.getElementById("root");
 
 ReactDOM.render(
@@ -21,3 +19,5 @@ ReactDOM.render(
   </Provider>,
   rootElement
 );
+
+console.log("state: ", store.getState());

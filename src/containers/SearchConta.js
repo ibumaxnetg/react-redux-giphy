@@ -4,6 +4,12 @@ import SearchCompo from "../components/SearchCompo";
 
 import { getUrls } from "../actions/";
 
+const mapStateToProps = (state) => {
+  return {
+    buttonTxt: state.buttonTxt
+  };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return {
     getUrls: (word) => {
@@ -12,4 +18,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(SearchCompo);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchCompo);

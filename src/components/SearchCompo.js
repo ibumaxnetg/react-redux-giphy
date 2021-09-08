@@ -9,12 +9,13 @@ class Search extends React.Component {
   }
 
   render() {
+    const { buttonTxt } = this.props;
     return (
       <div>
         <h2>Find Your GIF</h2>
         <form onSubmit={this.handleSubmit}>
           <input value={this.state.title} onChange={this.handleChange} />
-          <button type="submit">search this</button>
+          <button type="submit">{buttonTxt}</button>
         </form>
       </div>
     );
