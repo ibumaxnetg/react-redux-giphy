@@ -2,12 +2,13 @@ import React from "react";
 
 import ImgListConta from "./containers/imgListConta";
 
-import Search from "./components/Search";
+import SearchConta from "./containers/SearchConta";
+
 const App = () => {
   return (
     <div>
       Appだよ
-      <Search />
+      <SearchConta />
       <ImgListConta />
     </div>
   );

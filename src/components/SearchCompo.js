@@ -14,7 +14,7 @@ class Search extends React.Component {
         <h2>Find Your GIF</h2>
         <form onSubmit={this.handleSubmit}>
           <input value={this.state.title} onChange={this.handleChange} />
-          <button type="submit">search</button>
+          <button type="submit">search this</button>
         </form>
       </div>
     );
@@ -26,9 +26,11 @@ class Search extends React.Component {
   };
 
   handleSubmit = (event) => {
+    const { getUrls } = this.props;
     const { title } = this.state;
     event.preventDefault();
-    this.props.search(title);
+    getUrls(this.state.title);
+    // this.props.search(title);
   };
 }
 
