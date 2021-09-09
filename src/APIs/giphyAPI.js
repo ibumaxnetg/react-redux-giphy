@@ -3,7 +3,7 @@ import axios from "axios";
 const callGiphyApi = (keyword) => {
   const search = keyword;
   const apiKey = "WqzhthBhPNKsZXphlkTpudHFx96T5zRh";
-  const limit = 10;
+  const limit = 20;
 
   const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${search}&limit=${limit}`;
 

@@ -3,13 +3,13 @@ import React from "react";
 const imgListCompo = ({ urlList }) => {
   const list = urlList.map((url) => {
     return (
-      <li key={url}>
-        {url}
-        <img src={url} alt="" />
+      <li key={url} className="item">
+        {/* {url} */}
+        <img src={url} alt="" className="img" />
       </li>
     );
   });
-  return <ul>{list}</ul>;
+  return <ul className="list">{list}</ul>;
 };
 
 export default imgListCompo;
